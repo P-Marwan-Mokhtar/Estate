@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@layer {
+  .container {
+    @apply mx-auto px-[20px];
+  }
+  .header-h1 {
+    @apply font-bold text-[25px] md:font-black md:text-[35px] mb-[10px];
+  }
+  .header-span {
+    @apply font-normal border-b-2 m-0;
+  }
+  .header-p {
+    @apply text-sm text-gray-500 font-semibold md:text-[18px];
+  }
+  .animation-section {
+    @apply opacity-[.2] relative left-[400px] transition-all duration-[1s];
+  }
+  .btn {
+    @apply h-[40px] bg-blue-500 rounded-[5px] cursor-pointer;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.swiper-wrapper {
+  padding-bottom: 50px !important;
+}
+.mySwiper {
+  overflow: visible !important;
+}
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  position: absolute;
+  top: -35px;
+  right: 12px;
+  background: black;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 18px;
+  border-radius: 5px;
+}
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+  font-size: 25px;
+}
+.mySwiper .swiper-button-prev {
+  left: calc(100% - 100px) !important;
+}
+button {
+  cursor: pointer;
+}
+@media (max-width: 770px) {
+  .mySwiper .swiper-button-prev::after,
+  .mySwiper .swiper-button-next::after {
+    font-size: 20px;
+  }
+}
